@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ***************** ADDITION OF ARRAY Element ********************
+
+      // let arr = [1,2,3,4,5,3,2]
+      // function mySum(){
+      //   let output = arr.reduce((acc,curr)=> acc+curr)
+      //   console.log("the total sum  of array is : ",output)
+      // }
+      // mySum()
+
+      // **************** COUNTING THE OCCURANCE OF THE ITEM IN ARRAY******************
+
+      // let arr = [1,2,3,4,5,3,2]
+      // let arr = ["dog","cat","lion","tiger","cat","tiger","lion","lion"]
+      // function reapetNum(){
+      //   let output = arr.reduce((acc,curr)=>{
+      //     if(!acc[curr]){
+      //       acc[curr] = 1
+      //     }
+      //     else{
+      //       acc[curr]++
+      //     }
+      //     return acc
+      //   },{})
+      //   console.log(output)
+      // }
+      // reapetNum()
+
+      // **************** SPECIAL CASE ADDITION IN ARRAYS ***********************
+
+      // let data = 53144;
+      // function addNum() {
+      //   let convertToString = "" + data;
+      //   // console.log(convertToString);
+      //   // console.log(typeof convertToString);
+      //   let convertToArray = convertToString.split("");
+      //   // console.log(convertToArray);
+      //   let output = convertToArray.map((data) => parseInt(data));
+      //   console.log(output);
+      //   let finalOutput = output.reduce((a, b) => a + b);
+      //   console.log(finalOutput);
+
+      //   if (finalOutput > 10) {
+      //     console.log("this is greater than ten");
+      //     let toString = ""+finalOutput
+      //     let toArray = toString.split("").map((finalOutput)=> parseInt(finalOutput))
+      //     let nestedOutput = toArray.reduce((a, b) => a + b);
+      //     console.log(nestedOutput);
+      //   }
+      //   else{
+      //     console.log(finalOutput)
+      //   }
+      // }
+      // addNum();
+
+      // **************** SPECIAL CASE ADDITION IN ARRAYS ***********************
+
+      //     let data=[5,3,2]
+      // function myFunc(data){
+      //   let mySum = data.reduce((a,b)=> a+b)
+      //   console.log(mySum)
+      //   if(mySum > 10){
+      //     let toString = ""+mySum
+      //     let toArray = toString.split("").map((item)=> parseInt(item))
+      //     let finalOutput = toArray.reduce((a,b)=> a+b)
+      //     console.log(finalOutput)
+      //   }
+      //   else{
+      //     console.log(mySum)
+      //   }
+      // }
+      // myFunc(data)
+
+      // ******** ARRANGING THE ARRAY IN ASCENDING AND DESENDING  ORDER ************
+
+      // let array = [1, 2, 5, 4, 2, 1, 5, 3, 6, 5];
+
+      // let output = [...new Set(array)];
+      // console.log(output);
+
+      //  method -1
+
+      //  ascending order
+
+      // let finaloutput = output.sort((a,b)=> a-b)
+      // console.log(finaloutput)
+
+      //  desending order
+
+      // let finaloutput = output.sort((a,b)=> b-a)
+      // console.log(finaloutput)
+
+      //                   method -2
+
+      // for (let i = 0; i < output.length; i++) {
+      //   for (let j = i + 1; j < output.length; j++) {
+      //     if (output[i] > output[j]) {
+      //       let side = output[i];
+      //       output[i] = output[j];
+      //       output[j] = side;
+      //     }
+      //   }
+      // }
+
+      // console.log(output);
+
+      // // desending order
+      // for (let i = 0; i < output.length; i++) {
+      //   for (let j = i + 1; j < output.length; j++) {
+      //     if (output[i] < output[j]) {
+      //       let side = output[i];
+      //       output[i] = output[j];
+      //       output[j] = side;
+      //     }
+      //   }
+      // }
+      // console.log(output);
+
+      // ******************** CALL BIND APPLY***************************
+
+      // let name = {
+      //   fname:"Arun",
+      //   lname:"kumar"
+
+      // }
+      // let printFullName = function (hometown,state){
+      //   console.log(this.fname + " "+ this.lname +" from "+ hometown+","+state)
+      // }
+
+      // printFullName.call(name,"sadasivpet","hyderabad")
+      // printFullName.apply(name,["sadasivpet","hyderabad"])
+
+      // let fullname = printFullName.bind(name,"sadasivpet","hyderabad")
+      // // console.log(fullname)
+      // fullname()
+
+      // function test(){
+      //   console.log(x)
+      //   console.log(y)
+      //   var y=10
+      //   let x=5
+      // }
+      // test()
+
+      // *********************CAPITALIZE FIRST LETTER IN GIVEN ARRAY ********************
+
+      // let days = ["monday","tuesday","wednesday"]
+      // let output = days.map((a)=>a.charAt(0).toUpperCase() + a.substr(1))
+      // console.log(output)
+      // let capitalize = days.map((a)=> a.charAt(0).toUpperCase()+a.substr(1))
+      // console.log(capitalize)
+
+      //  *******************REVERSE THE GIVEN ARRAY USING LOOPS ********************
+
+      // let inputArray = [11, 2, 3, 4, 5];
+      // function reverseArray(inputArray) {
+      //   var outputArray = [];
+      //   for (var i = inputArray.length - 1; i >= 0; i--) {
+      //     // console.log(inputArray[i]);
+      //     outputArray.push(inputArray[i]);
+      //   }
+      //   console.log(outputArray);
+      // }
+      // reverseArray(inputArray);
+
+      // ********************REMOVEING THE DUPLICATES************************
+
+      // let array = [11,2,3,11,3,2,5]
+      // function removeDup(array){
+
+      //   // first method
+
+      // let remove = [...new Set(array)]
+      // console.log(remove)
+
+      //   // second method
+      //     let unique = array.filter((item,pos)=>{
+      //       return array.indexOf(item) == pos
+      //     })
+      //     console.log(unique)
+      // }
+      // removeDup(array)
+
+      // ***********************COLLECTION OF DUPLICATE ELEMENTS IN ARRAY***************
+
+      // let arr = [11, 2, 3, 11, 3, 2, 5];
+
+      // const collectDuplicates = (arr) => {
+      //   let output = arr.filter((ele, index, array) => {
+      //     return array.indexOf(ele) !== index;
+      //   });
+      //   console.log(output);
+      // };
+      // collectDuplicates(arr);
+
+      // ***************REVERSE THE NUMBER ***********************
+      // let number = 1234;
+      // let convertTostring = "" + number;
+      // let toArray = convertTostring.split("").map((a) => parseInt(a));
+      // console.log(toArray)
+
+      // /************/ first method  *********
+
+      // for(let i= 0 ;i<toArray.length ; i++){
+      //   // console.log(toArray[i])
+      //   for(let j= i+1; j<toArray.length ; j++){
+      //     // console.log(toArray[j])
+      //     if( toArray[i] < toArray[j]){
+      //       let mySide = toArray[i]
+      //       toArray[i] = toArray[j]
+      //       toArray[j] = mySide
+      //     }
+      //   }
+      // }
+      // console.log(toArray)
+      // let output = toArray.join("")
+      // console.log(output)
+
+      // ***********second method ****************
+      // let outputArray = [];
+      // for (let i = toArray.length -1 ; i >= 0; i--) {
+      //   outputArray.push(toArray[i]);
+      // }
+      // let finalOutput =  outputArray.join("")
+      // console.log(outputArray);
+      // console.log(finalOutput);
+
+      // ************** SUM OF ElEMENTS EQUAL TO PEAK ELEMEMT IN  ARAAY***********************
+
+      // let array = [6, 2, -1, 4, 11];
+      // let peak = array[0];
+      // let total = 0;
+      // function equal(array) {
+      //   for (let i = 0; i < array.length; i++) {
+      //     total += array[i];
+
+      //     if (array[i] > peak) {
+      //       peak = array[i];
+      //     }
+      //   }
+      //   // console.log(total)
+      //   // console.log(peak)
+      //   console.log(total - peak == peak);
+      // }
+
+      // equal(array);
+      // // ********************HIGHEST ELEMENT IN ARRAY **********************
+
+      // let array = [11, 9, 19, 5, 211];
+      // let peak = array[0];
+
+      // ***********METHOD-1*******************
+
+      // // for( let i = 0 ; i< array.length ; i++){
+      // //   if(array[i] > peak){
+      // //     peak = array[i]
+      // //   }
+
+      // // }
+
+      // ****************METHOD-2 *******************
+
+      // let output = array.forEach((ele) => {
+      //   if (ele > peak) {
+      //     peak = ele;
+      //   }
+      // });
+      // console.log(peak);
+
+      // *********************METHOD -3 ****************
+
+      // let arr = [12, 23, 43, 23, 45, 12, 34, 56];
+
+      // let output = arr.reduce((acc, curr) => {
+      //   return acc > curr ? acc : curr;
+      // });
+      // console.log(output);
+
+      // ************************REVERSE THE STRING *************************
+
+      // let str = "arunkumar";
+      // function reverseStr(str) {
+      // //   // ****************method -1 *****************
+
+      // //   // let output = str.split("").reverse().join("")
+      // //   // console.log(output)
+
+      // //   // ******************method -2 ******************
+
+      //   let toArray = str.split("");
+      //   // console.log(toArray);
+      //   let reverseArray = [];
+      //   for (let i = toArray.length - 1; i >= 0; i--) {
+      //     reverseArray.push(toArray[i]+" ");
+      //   }
+      //   console.log(reverseArray);
+      //   reverseString = reverseArray.join("");
+      //   console.log(reverseString);
+      // }
+      // reverseStr(str);
+
+      // **************REMOVE WHITESPACES FROM STRING****************
+
+      // let str = "My   name   is   Arun    kumar";
+
+      // const removeSpaces = (str) => {
+      //   let output = " ";
+      //   for (let i = 0; i < str.length; i++) {
+      //     if (str[i] !== " ") {
+
+      //       // here it will remove white spaces from string
+      //       output += str[i];
+      //     }
+      //   }
+
+      //   console.log(output);
+      // };
+      // removeSpaces(str);
+
+      // **************REVESRING THE WORDS IN A GIVEN STRING ****************
+
+      // let str = "Arun Kumar";
+      // let str2 = str.split(" ");
+      // let reverseWords = [];
+      // const reverseWordString = (str) => {
+      //   console.log(str2);
+
+      //   for (let i = 0; i < str2.length; i++) {
+      //     reverseWord = "";
+      //     for (let j = str2[i].length - 1; j >= 0; j--) {
+      //       // console.log(str2[i][j])
+      //       reverseWord += str2[i][j];
+      //     }
+      //     reverseWords.push(reverseWord);
+      //     // console.log(reverseWord)
+      //   }
+      //   // console.log(reverseWords)
+      //   return reverseWords.join(" ");
+      // };
+      // console.log(reverseWordString(str));
+
+      // ******************REVERSE THE FIRST WORD IN GIVEN STRING ***************
+
+      // let str = "Arun Kumar";
+      // let spaceIndex ;
+      // const reverseFirstWord = (str) => {
+      //   // find first space in string
+      //   for (let i = 0; i < str.length; i++) {
+      //     if (str[i] === " ") {
+      //       spaceIndex = i;
+      //       break;
+      //     }
+      //   }
+      //   // console.log(spaceIndex)
+
+      //   let reverseWord = "";
+      //   for (let j = spaceIndex - 1; j >= 0; j--) {
+      //     reverseWord += str[j];
+      //   }
+      //   // console.log(reverseWord);
+
+      //   let newStr = reverseWord + str.substr(spaceIndex);
+      //   console.log(newStr);
+      // };
+      // reverseFirstWord(str);
+
+      // **************MOVE THE CAPITAL LETTERS FIRST IN GIVEN STRING **********
+
+      // let str = "ArunKumar";
+      // let capitalLetters = "";
+      // let smallLetters = "";
+      // const moveCapitalLetter = (str) => {
+      //   for (let i = 0; i < str.length; i++) {
+      //     if (str[i] >= "A" && str[i] <= "Z") {
+      //       capitalLetters += str[i];
+      //     } else {
+      //       smallLetters += str[i];
+      //     }
+      //   }
+      //   let newStr = capitalLetters + smallLetters;
+      //   console.log(newStr);
+      // };
+      // moveCapitalLetter(str);
+
+      // *********************fibonacci series *************************
+
+      // let number = 10;
+
+      // const fibonacciSeries = (number) => {
+      //   let a = 0;
+      //   let b = 1;
+      //   let c;
+      //   fib = [a, b];
+      //   for (let i = 2; i < number; i++) {
+      //     c = a + b;
+      //     fib.push(c);
+      //     a = b;
+      //     b = c;
+      //   }
+      //   return fib;
+      // };
+      // console.log(fibonacciSeries(number));
+
+      // *********************CHECK GIVEN NUMBER IS NUMBER OR NOT **************
+
+      // let myNumber ="3.4"
+      // // let myNumber ="3.4c"
+      // let output = isNaN(myNumber)
+      // console.log(output)
+
+      // ******************* CHECK GIVEN TWO STRINGS ANAGRAM TO EACH OTHER *****
+
+      // angram means  the rearranging the letters in 1st string  is the same  2nd string
+      // let str1 = "Mary";
+      // let str2 = "Army";
+      // const anagramStrings = (str1, str2) => {
+      //   let a = str1.toLowerCase();
+      //   let b = str2.toLowerCase();
+
+      //   let c = a.split("").sort().join("");
+      //   let d = b.split("").sort().join("");
+      //   console.log(c)
+      //   console.log(d)
+
+      //   return c === d;
+      // };
+      // console.log(anagramStrings(str1, str2))
+
+      // **************SWAPPING THE TWO NUMBERS WITHOUT USING 3RD VARIBLE**************
+
+      // let a = 25 ;
+      // let  b=32;
+      // [a,b] = [b,a]
+      // console.log(`the swapped  value of A is ${a} and swapped value of B is ${b} `)
+
+      // ********************RECURSION  EXAMPLE IS FACTORIAL***************************
+      // let number = 7;
+      // let fact = 1;
+      // const recursionFactorial = (number) => {
+      //   if (number == 0) {
+      //     console.log(` the factorial of ${number} is : 1`);
+      //   } else {
+      //     for (let i = 1; i <= number; i++) {
+      //       fact = fact * i;
+      //     }
+      //     console.log(` the factorial of ${number} is : ${fact}`);
+      //   }
+      // };
+      // recursionFactorial(number);
+
+      // ****************PALINDROME****************************
+      // let value = "racecar";
+      // const myPalindrome = () => {
+      //   let convertedValue = value.toString().split("").reverse().join("");
+      //   let myValue = value.toString();
+      //   if (convertedValue == myValue) {
+      //     console.log("It is palindrome !");
+      //   } else {
+      //     console.log("It is not palindrome!");
+      //   }
+      // };
+      // myPalindrome();
+
+      // *************************PRIME NUMBER **********************************
+      // let number = prompt(" enter the number !!!")
+      // const myPrime = () => {
+      //   if (number == 1) {
+      //     console.log("1 is either prime number nor composite number !!!");
+      //   }else if(number == 2){
+      //     console.log("It is a prime number!!")
+      //   }
+      //   else {
+      //     for (let i = 2; i < number; i++) {
+      //       if (number%i == 0) {
+      //         var output = ` ${number} is a Not  prime number`;
+      //         break;
+      //       } else {
+      //         var  output = ` ${number} is a  prime number`;
+      //       }
+
+      //     }
+      //     console.log(output);
+      //   }
+      // };
+      // myPrime();
+
+      // ****************** ARRANGING STRING IN ALPHABETICAL ORDER *********
+
+      //  let myString =  "Arunkumar"
+      //  let str = myString.toLowerCase().split("")
+
+      //  const sortedString = (str)=>{
+      //  for(let i = 0 ; i<str.length ; i++){
+      //   for(let j = i+1 ; j<str.length ; j ++){
+      //     if(str[i]> str[j]){
+      //       let temp = str[i]
+      //       str[i] = str[j]
+      //       str[j] = temp
+      //     }
+      //   }
+      //  }
+      //  console.log(str)
+      //  }
+      //  sortedString(str)
+
+      // ********************* ADDING SPACE BETWEEN LETTERS IN STRING************
+
+      // let str = "arunkumar";
+      // let str2 = str.split("");
+      // // let output ="";
+      // let output =[];
+      // const addSpace = () => {
+      //   for (let i = 0; i < str2.length; i++) {
+      //     // output += str2[i]+" "
+      //     output.push(str2[i]+" ")
+
+      //   }
+      //   console.log(str);
+      //   console.log(output.join(""));
+      //   // console.log(output)
+      // };
+      // addSpace();
+
+      // ***************REMOVING TE SPACES BETWEEN THE STRING ***********************
+      // let str = "a r unku mar"
+      // let str2 = str.split("")
+      // let output = []
+      // const removeSpaces = ()=>{
+      //   for( let i=0 ; i<str2.length ; i++ ){
+      //     if(str2[i] !== " "){
+      //       output.push(str2[i])
+      //     }
+      //   }
+      //   console.log(str)
+      //   console.log(output.join(""))
+      // }
+      // removeSpaces()
+
+      // *********************TRIANGLE PATTREN*****************
+      // const myTriangle =(n)=>{
+      //   for(let i = 1 ;i<=n ; i++){
+      //     let  row= " "
+      //     for(let j = 1; j<(2*i - 1) ; j++){
+      //       row += "*"
+      //     }
+      //     console.log(row)
+      //   }
+      // }
+      // myTriangle(7)
+    </script>
+  </body>
+</html>
