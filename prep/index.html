@@ -375,21 +375,21 @@
 
       // **************MOVE THE CAPITAL LETTERS FIRST IN GIVEN STRING **********
 
-      // let str = "ArunKumar";
-      // let capitalLetters = "";
-      // let smallLetters = "";
-      // const moveCapitalLetter = (str) => {
-      //   for (let i = 0; i < str.length; i++) {
-      //     if (str[i] >= "A" && str[i] <= "Z") {
-      //       capitalLetters += str[i];
-      //     } else {
-      //       smallLetters += str[i];
-      //     }
-      //   }
-      //   let newStr = capitalLetters + smallLetters;
-      //   console.log(newStr);
-      // };
-      // moveCapitalLetter(str);
+      let str = "ArunKumar";
+      let capitalLetters = "";
+      let smallLetters = "";
+      const moveCapitalLetter = (str) => {
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] >= "A" && str[i] <= "Z") {
+            capitalLetters += str[i];
+          } else {
+            smallLetters += str[i];
+          }
+        }
+        let newStr = capitalLetters +  smallLetters;
+        console.log(newStr);
+      };
+      moveCapitalLetter(str);
 
       // *********************fibonacci series *************************
 
