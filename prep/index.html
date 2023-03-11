@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Interview Prep</title>
   </head>
   <body>
     <script>
@@ -304,6 +304,7 @@
       //   }
       //   console.log(reverseArray);
       //   reverseString = reverseArray.join("");
+      //   console.log(str);
       //   console.log(reverseString);
       // }
       // reverseStr(str);
@@ -373,23 +374,55 @@
       // };
       // reverseFirstWord(str);
 
+      // ******************REVERSE THE SECOND  WORD IN GIVEN STRING ***************
+
+      // let str = "Arun Kumar";
+      // const reverseSecondWord = (str) => {
+      //   let words = str.split(" ");
+      //   // console.log(words)
+      //   if (words.length > 1) {
+      //     let secondWord = words[1];
+      //     //  console.log(secondWord)
+      //     let reverse = "";
+
+      //     for (let i = secondWord.length - 1; i >= 0; i--) {
+      //       reverse += secondWord[i];
+      //     }
+      //     // console.log(reverse)
+      //     words[1] = reverse;
+      //     let output = words.join(" ");
+      //     console.log(output);
+      //   }
+      // };
+      // reverseSecondWord(str);
+
       // **************MOVE THE CAPITAL LETTERS FIRST IN GIVEN STRING **********
 
-      let str = "ArunKumar";
-      let capitalLetters = "";
-      let smallLetters = "";
-      const moveCapitalLetter = (str) => {
-        for (let i = 0; i < str.length; i++) {
-          if (str[i] >= "A" && str[i] <= "Z") {
-            capitalLetters += str[i];
-          } else {
-            smallLetters += str[i];
-          }
-        }
-        let newStr = capitalLetters +  smallLetters;
-        console.log(newStr);
-      };
-      moveCapitalLetter(str);
+      // let str = "ArunKumar";
+      // let capitalLetters = "";
+      // let smallLetters = "";
+      // const moveCapitalLetter = (str) => {
+      //   for (let i = 0; i < str.length; i++) {
+      //     if (str[i] >= "A" && str[i] <= "Z") {
+      //       capitalLetters += str[i];
+      //     } else {
+      //       smallLetters += str[i];
+      //     }
+      //   }
+      //   let newStr = capitalLetters +  smallLetters;
+      //   console.log(newStr);
+      // };
+      // moveCapitalLetter(str);
+
+      // ***************PRINT THE PRIME INDEXES  VALUES IN A STRING  **************
+
+      // let str = "Arun Kumar";
+
+      // const isPrime = (num) => {
+      //   if (num < 2) {
+      //     return false;
+      //   }
+      // };
 
       // *********************fibonacci series *************************
 
@@ -547,11 +580,13 @@
 
       // *********************TRIANGLE PATTREN*****************
       // const myTriangle =(n)=>{
+
+      //   let row = ""
       //   for(let i = 1 ;i<=n ; i++){
-      //     let  row= " "
-      //     for(let j = 1; j<(2*i - 1) ; j++){
-      //       row += "*"
-      //     }
+      //      row += "* "
+      //     // for(let j = 1; j<(2*i - 1) ; j++){
+      //     //   row += "*"
+      //     // }
       //     console.log(row)
       //   }
       // }
