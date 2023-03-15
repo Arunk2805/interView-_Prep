@@ -349,32 +349,9 @@
       // };
       // console.log(reverseWordString(str));
 
-      // ******************REVERSE THE FIRST WORD IN GIVEN STRING ***************
+    
 
-      // let str = "Arun Kumar";
-      // let spaceIndex ;
-      // const reverseFirstWord = (str) => {
-      //   // find first space in string
-      //   for (let i = 0; i < str.length; i++) {
-      //     if (str[i] === " ") {
-      //       spaceIndex = i;
-      //       break;
-      //     }
-      //   }
-      //   // console.log(spaceIndex)
-
-      //   let reverseWord = "";
-      //   for (let j = spaceIndex - 1; j >= 0; j--) {
-      //     reverseWord += str[j];
-      //   }
-      //   // console.log(reverseWord);
-
-      //   let newStr = reverseWord + str.substr(spaceIndex);
-      //   console.log(newStr);
-      // };
-      // reverseFirstWord(str);
-
-      // ******************REVERSE THE SECOND  WORD IN GIVEN STRING ***************
+      // // ******************REVERSE THE FIRST / SECOND  WORD IN GIVEN STRING ***************
 
       // let str = "Arun Kumar";
       // const reverseSecondWord = (str) => {
@@ -382,6 +359,8 @@
       //   // console.log(words)
       //   if (words.length > 1) {
       //     let secondWord = words[1];
+      //     // let secondWord = words[0];
+         
       //     //  console.log(secondWord)
       //     let reverse = "";
 
@@ -389,6 +368,7 @@
       //       reverse += secondWord[i];
       //     }
       //     // console.log(reverse)
+      //     // words[0] = reverse;
       //     words[1] = reverse;
       //     let output = words.join(" ");
       //     console.log(output);
@@ -495,7 +475,7 @@
       // const myPalindrome = () => {
       //   let convertedValue = value.toString().split("").reverse().join("");
       //   let myValue = value.toString();
-      //   if (convertedValue == myValue) {
+      //   if (convertedValue === myValue) {
       //     console.log("It is palindrome !");
       //   } else {
       //     console.log("It is not palindrome!");
@@ -563,7 +543,7 @@
       // };
       // addSpace();
 
-      // ***************REMOVING TE SPACES BETWEEN THE STRING ***********************
+      // ***************REMOVING THE SPACES BETWEEN THE STRING ***********************
       // let str = "a r unku mar"
       // let str2 = str.split("")
       // let output = []
@@ -591,6 +571,34 @@
       //   }
       // }
       // myTriangle(7)
+
+      // ******************DELETE THE PARTICULAR INDEX FROM OBJECTS OF ARRAY**********
+
+      // let people = [
+      //   {
+      //     name: "arun",
+      //     age: 22,
+      //   },
+      //   {
+      //     name: "sai",
+      //     age: 21,
+      //   },
+      //   {
+      //     name: "ravi",
+      //     age: 24,
+      //   },
+      // ];
+
+      // const deleteObjectFromArray = (arr, prop, value) => {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     if (arr[i][prop] === value) {
+      //       arr.splice(i, 1);
+      //       break;
+      //     }
+      //   }
+      // };
+      // deleteObjectFromArray(people, "name", "ravi");
+      // console.log(people);
     </script>
   </body>
 </html>
